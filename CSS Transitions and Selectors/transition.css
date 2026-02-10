@@ -1,0 +1,169 @@
+/* ===== reset ===== */
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+
+/* ===== LEFT SIDEBAR (buttons + dropdown) ===== */
+#menuItems{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 15%;
+  height: 100vh;
+  background: #000;      /* black sidebar background */
+}
+
+/* sidebar buttons */
+#menuItems button{
+  width: 100%;
+  padding: 16px 10px;
+  border: 0;
+  border-bottom: 2px solid #000;   
+  background: #0033ff;             /* blue */
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* hover on nav buttons */
+#menuItems button:hover{
+  background: #001f99;
+}
+
+/* dropdown list (hidden until hover Recent Articles) */
+#jumpMenu{
+  list-style: none;
+  margin: 0;
+  padding: 10px 0;
+  background: goldenrod;
+  display: none;                   /* hidden by default */
+}
+
+/* show only when hovering the Recent Articles button */
+#recentArticles:hover + #jumpMenu,
+#jumpMenu:hover{
+  display: block;
+}
+
+#jumpMenu li a{
+  display: block;
+  padding: 2px 12px;               /* tight vertical spacing like screenshot */
+  color: blue;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+#jumpMenu li a:hover{
+  background: blue;
+  color: white;
+}
+
+/* ===== MAIN AREA ===== */
+main{
+  margin-left: 15%;
+  padding-top: 140px;              /* space for fixed header */
+  padding-left: 24px;
+  padding-right: 24px;
+  background: #fff;
+  min-height: 100vh;
+}
+
+/* ===== FIXED TOP HEADER ===== */
+header {
+  position: fixed;
+  top: 0;
+  left: 15%;
+  width: 85%;
+  height: 100px;
+  background: red;
+  text-align: center;
+  line-height: 100px;
+  z-index: 10;
+}
+
+
+header p{
+  margin: 0;
+  font-size: 35px;
+  font-weight: 50px;
+}
+
+/* big title centered */
+h1{
+  text-align: center;
+  font-size: 40px;
+  margin: 10px 0 30px;
+  margin-top: -20px;
+}
+
+/* ===== ARTICLES GRID ===== */
+#container{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px;
+}
+
+/* each article fixed width */
+#container article{
+  width: 300px;
+  color: #b6b6b6;                  /* light gray at first */
+  transform: scale(1);
+  transition: color 2s, transform 2s;  /* 2 seconds both ways */
+}
+
+/* article hover: darker + expands */
+#container article:hover{
+  color: #222;
+  transform: scale(1.10);
+}
+
+/* first letter only for main paragraph (not "Read more") */
+#container article > p:first-of-type::first-letter{
+  font-family: "Times New Roman", Times, serif;
+  font-size: 36px;
+}
+
+/* Keep "Read more" from being affected by the gray */
+#container article > p:last-of-type{
+  color: initial;
+}
+
+/* arrow icon for Google links */
+a[href*="google"]::after{
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  margin-left: 8px;
+  background: url("arrow.png") no-repeat center / contain;
+}
+
+/* ===== THANK YOU BOX bottom-right ===== */
+#thanks{
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+  background: lightblue;
+  border: 1px solid #000;
+  padding: 10px 15px;
+  font-size: 20px;
+}
+
+/* PNG after read more... */
+a[href*="google"]::after {
+  content: "";
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  margin-left: 6px;
+
+  background-image: url("arrow.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+
+article {
+  scroll-margin-top: 100px;
+}
+
+
