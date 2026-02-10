@@ -1,0 +1,104 @@
+/* Basic reset  */
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; font-family: Arial, sans-serif; }
+
+/* Left jump menu (sidebar) */
+#jumpMenu {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 15%;
+  height: 100vh;
+
+  padding: 16px;
+  background: lightblue;
+  border-right: 1px solid #ccc;
+
+  overflow-y: auto;
+}
+
+#jumpMenu a {
+  
+  /* puts each link on its own line and controls space between links */
+  display: block;      
+  margin-bottom: 10px; 
+}
+
+
+/* Main area moves right to make room for sidebar */
+main {
+  margin-left: 15%;
+  padding: 20px;
+
+  /* make room for the fixed header */
+  padding-top: 120px;
+}
+
+/* Header stays at top (not affected by scrolling)  */
+main > header {
+  position: fixed;
+  top: 0;
+  left: 15%;
+  right: 0;
+  height: 100px;
+  font-size: 35px;
+
+  background: lightblue;
+  border-bottom: 1px solid #ccc;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Buttons in the header */
+main > header nav {
+  margin-top: 0px;
+  display: flex;
+  gap: 40px;
+}
+
+main > header button {
+  padding: 12px, 30px;
+  font-size: 18px;
+  color: red;
+  border: 1px solid black;
+  background: #eee;
+  cursor: pointer;
+}
+
+/* Articles become “cards” and wrap when window resizes */
+#container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+#container article {
+  width: 300px;          /* rubric hint */
+  padding: 15px;
+  border: 1px solid #ccc;
+  background: white;
+}
+
+/* Thank-you block fixed bottom-right */
+#thanks {
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+
+  padding: 10px 14px;
+  background: black;
+  color: white;
+}
+
+article {
+  scroll-margin-top: 75px;
+}
+
+/* Center out "Recent Journal Articles" */
+main > h1{
+  text-align: center;
+}
