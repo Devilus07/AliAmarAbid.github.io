@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+    table { border-collapse: collapse; }
+    th, td { border: 1px solid black; padding: 6px 10px; text-align: left; }
+    </style>
+    <meta charset="UTF-8">
+    <metaname="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Ordering Form</title>
+</head>
+<body>
+
+    <h1>Pizza Ordering Form</h1>
+
+    <form action="#" method="post">
+        <h2>Contact Information</h2>
+
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"><br>
+
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone">
+
+        <h2>Select Pizza Size</h2>
+        <select name="size" required>
+            <option value="" selected disabled>Select Size</option>
+            <option value="medium">Medium</option>
+            <option value="large">Large</option>
+            <option value="xlarge">X-Large</option>
+        </select>
+
+        <h2>Select Sauce</h2>
+        <input type="radio" id="marinara" name="sauce" value="Marinara" required>
+        <label for="marinara">Marinara</label><br>
+
+        <input type="radio" id="ranch" name="sauce" value="Ranch" required>
+        <label for="ranch">Ranch</label><br>
+
+        <input type="radio" id="nosauce" name="sauce" value="No Sauce">
+        <label for="nosauce">No Sauce</label><br><br>
+
+        <h2>Select Toppings</h2>
+        <input type="checkbox" id="pepperoni" name="toppings" value="Pepperoni">
+        <label for="pepperoni">Pepperoni</label>
+
+        <input type="checkbox" id="sausage" name="toppings" value="Sausage">
+        <label for="sausage">Sausage</label><br>
+
+        <input type="checkbox" id="mushrooms" name="toppings" value="Mushrooms">
+        <label for="mushrooms">Mushrooms</label>
+
+         <input type="checkbox" id="pineapple" name="toppings" value="Pineapple">
+        <label for="pineapple">Pineapple</label><br>
+
+        <input type="checkbox" id="peppers" name="toppings" value="Peppers">
+        <label for="peppers">Peppers</label>
+
+        <input type="checkbox" id="onions" name="toppings" value="Onions">
+        <label for="onions">Onions</label><br>
+
+        <h2>Additional Instructions</h2>
+        <textarea id="instructions" name="instructions" rows="4" cols="50" placeholder="Add Instructions"></textarea><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <h3>List of My Favorite Games</h3>
+    <table style="border: 1px solid black; border-collapse: collapse;">
+        <tr>
+            <th>Developer</th>
+            <th>Title</th>
+            <th>Year</th>
+        </tr>
+        <tr>
+            <td>Treyarch</td>
+            <td>Call of Duty: Black Ops 2</td>
+            <td>2012</td>
+        </tr>
+        <tr>
+            <td>EA</td>
+            <td>UFC 5</td>
+            <td>2023</td>
+        </tr>
+        <tr>
+            <td>Gearbox Softwar</td>
+            <td>Borderlands 1</td>
+            <td>2009</td>
+        </tr>
+        <tr>
+            <td>Naughty Dog</td>
+            <td>Crash Bandicoot: The Wrath of Cortex</td>
+            <td>2001</td>
+        <tr>
+            <th colspan="3">Count: 4</th>
+        </tr>
+    </table>
+
+</body>
+</html>
