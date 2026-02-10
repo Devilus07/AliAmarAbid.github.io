@@ -1,0 +1,108 @@
+/* 
+Name: Ali Amar Abid
+Course: CIS 4004
+Assignment: Basic CSS
+Date: 02/03/2026
+*/
+
+/* Page base */
+body{
+    background-color: lightblue; 
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+}
+
+/* Title Header */
+h1{ 
+    text-align: center;        
+    font-size: 44px;           
+    text-emphasis: bold;
+    margin-bottom: 21px
+    font
+}
+
+/* Section Headers */
+h2{
+    font-size: 27px;           
+    text-emphasis: bold;
+    margin-bottom: 20px;
+}
+
+/* General paragraph spacing */
+p{
+    font-size: 14.3px;
+    line-height: 1.1;
+    margin: 12px 0;
+}
+
+/* 2nd paragraph (the centered white box with green border) */
+#paragraph2{
+    width: 47%;                 
+    padding: 20px 40px;        
+    border: 4px solid green; 
+    background-color: white;
+    line-height: 1.8; 
+    margin: 10px;
+    font-size: smaller;
+    margin-bottom: 15px;
+}
+
+/* 4th and 5th paragraphs (blue boxes) */
+.blue{
+    background-color: #030e75;  /* deep blue */
+    color: white;
+    border: 3px solid #07245f;
+    padding: 16px;
+    max-width: 100%
+    line-height: 1.6;
+}
+
+ol{
+    list-style-type: decimal-leading-zero;
+    margin-left: 0;
+    padding-left: 25px;
+}
+
+/* Link colors */
+a{
+    color: #7a1fa2;           
+    text-decoration: underline;
+}
+
+/* w3schools link must be a different color */
+a[href*="w3schools"]{
+    color: #1b7f1b;           
+    font-weight: bold;
+}
+
+/* List items use two digits */
+ol{
+    list-style-type: decimal-leading-zero;
+    margin-left: 0;
+    margin-bottom: 0;
+}
+
+/* Table: borders overlap + header/cells different backgrounds */
+table{
+    border-collapse: collapse;  /* makes borders overlap */
+    width: 720px;
+    margin-top: 15px;
+    background-color: white;
+}
+
+th, td{
+    border: 2px solid black;    
+    padding: 10px 12px;
+    text-align: left;
+}
+
+/* Table header background */
+th{
+    background-color: #d6dbe6;
+    font-weight: bold;
+}
+
+/* Table cell background */
+td{
+    background-color: #f2f4f8;
+}
