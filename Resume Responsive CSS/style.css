@@ -1,0 +1,119 @@
+
+/* box */
+* {
+  box-sizing: border-box;
+}
+
+/* Page base */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: lightgray;
+  color: #222;
+  line-height: 1.5;
+}
+
+/* Color for the links */
+a {
+  color: #1a73e8;
+}
+
+/* Center the content */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+/* Header */
+.site-header {
+  background: lightgrey;
+  border-bottom: 2px solid #ddd;
+  padding: 16px 0;
+}
+
+.name {
+  margin: 0 0 10px;
+  font-size: 28px;
+  text-align: center;
+}
+
+/* Contact box */
+.contact {
+  background: #ffffff;
+  border: 1px solid #ddd;
+  padding: 12px;
+}
+
+.contact-line {
+    display: flex;
+    align-items: center;
+    gap: 50px; 
+    flex-wrap: wrap; /* keeps it responsive on mobile */
+}
+
+/* Card sections */
+.card {
+  background: #ffffff;
+  border: 1px solid #ddd;
+  padding: 14px;
+  margin-top: 14px;
+}
+
+.card h2 {
+  margin: 0 0 10px;
+  font-size: 20px;
+}
+
+/* Lists */
+.list {
+  margin: 8px 0 0;
+  padding-left: 18px;
+}
+
+/* Back to resume link */
+.nav {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 10px;
+}
+
+.nav a {
+  display: inline-block;
+  background: #eeeeee;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  text-decoration: none;
+}
+
+/* Layout wrapper */
+.grid {
+  display: block; /* mobile default */
+}
+
+/* For moblie */
+@media (max-width: 412px) {
+  .name {
+    font-size: 24px;
+  }
+
+  /* Stack contact lines */
+  .contact {
+    font-size: 14px;
+  }
+}
+
+/* For Desktop */
+@media (min-width: 1920px) {
+  /* Two-column layout on desktop */
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+
+  /* Make full-width sections span both columns */
+  .span-2 {
+    grid-column: 1 / -1;
+  }
+}
